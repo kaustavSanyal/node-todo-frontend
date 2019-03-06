@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = " kaustavdocker/dockerimage:$(build.buildid)"
+    registry = " kaustavdocker"
     registryCredential = 'dockerhub'
     dockerImage = ''
     containerId = sh(script: 'docker ps -aqf "name=node-app"', returnStdout: true)
